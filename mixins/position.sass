@@ -1,0 +1,37 @@
+// ----- position shorthand
+// 		--	+coords(n 20px 10px 2px)
+// ---------------------------------------
+@function autoOrValue($val)
+	@if $val == a or $val == auto
+		@return auto
+	@else
+		@return $val
+
+=coords($coordinates: n n n n)
+	$top: nth($coordinates, 1)
+	$right: nth($coordinates, 2)
+	$bottom: nth($coordinates, 3)
+	$left: nth($coordinates, 4)
+	@if $top != n
+		top: autoOrValue($top)
+	@if $right != n
+		right: autoOrValue($right)
+	@if $bottom != n
+		bottom: autoOrValue($bottom)
+	@if $left != n
+		left: autoOrValue($left)
+
+// Absolute
+=absolute($coordinates: 0 n n 0)
+	position: absolute
+	+coords($coordinates)
+
+// Fixed
+=fixed($coordinates: 0 n n 0)
+	position: fixed
+	+coords($coordinates)
+
+// Relative
+=relative($coordinates: 0 n n 0)
+	position: relative
+	+coords($coordinates)

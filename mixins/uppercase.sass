@@ -1,0 +1,7 @@
+=uppercase($spacing: null)
+	@if $spacing
+		letter-spacing: $spacing
+		text-indent: $spacing
+		text-transform: uppercase
+  @else
+		text-transform: uppercase

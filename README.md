@@ -1,5 +1,6 @@
 # s-sass-helpers 
-[![NPM version](https://img.shields.io/npm/v/s-sass-helpers.svg)](https://www.npmjs.com/package/s-sass-helpers) ![Dependencies](https://img.shields.io/david/sebastiansandqvist/s-sass-helpers.svg) [![build status](http://img.shields.io/travis/sebastiansandqvist/s-sass-helpers.svg)](https://travis-ci.org/sebastiansandqvist/s-sass-helpers) [![NPM license](https://img.shields.io/npm/l/s-sass-helpers.svg)](https://www.npmjs.com/package/s-sass-helpers)
+## A collection of useful sass mixins
+
 ## License
 Copyright (c) 2015, Sebastian Sandqvist <s.github@sparque.me>
 

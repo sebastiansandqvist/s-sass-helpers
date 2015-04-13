@@ -1,0 +1,61 @@
+
+// ----- css triangle
+// 		--	+triangle
+// 		--	+triangle(up)
+// 		--	+triangle(up, 100px, blue)
+// 		--	+triangle(top-right, 100px 80px, $base)
+// ---------------------------------------
+=triangle($direction: right, $size: 0.75em, $color: inherit)
+	display: inline-block
+	height: 0
+	width: 0
+	-webkit-transform: rotate(360deg)
+	$width: null
+	$height: null
+	$border-widths: null
+	@if type-of($size) == list
+		$height: nth($size, 2)
+		$width: nth($size, 1)
+	@else
+		$height: $size
+		$width: $size
+	@if $direction == up or $direction == down
+		$border-widths: $height $width / 2
+	@else if $direction == right or $direction == left
+		$border-widths: $height / 2 $width
+	@else
+		$border-widths: $height / 2 $width / 2
+	border-style: solid
+	border-width: $border-widths
+	@if $direction == up or $direction == down or $direction == right or $direction == left
+		border-color: transparent
+		@if $direction == up
+			border-bottom-color: $color
+			border-top-width: 0
+		@else if $direction == right
+			border-left-color: $color
+			border-right-width: 0
+		@else if $direction == down
+			border-bottom-width: 0
+			border-top-color: $color
+		@else if $direction == left
+			border-left-width: 0
+			border-right-color: $color
+	@else if $direction == top-right or $direction == top-left
+		border-bottom-color: transparent
+		border-top-color: $color
+		@if $direction == top-right
+			border-left-color: transparent
+			border-right-color: $color
+		@else if $direction == top-left
+			border-left-color: $color
+			border-right-color: transparent
+	@else if $direction == bottom-right or $direction == bottom-left
+		border-bottom-color: $color
+		border-top-color: transparent
+		@if $direction == bottom-right
+			border-left-color: transparent
+			border-right-color: $color
+		@else if $direction == bottom-left
+			border-left-color: $color
+			border-right-color: transparent
