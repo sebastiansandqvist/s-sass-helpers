@@ -1,10 +1,6 @@
 // ----- size shorthand
 // 		--	+size(10px 20px)
 // ---------------------------------------
-=size($size)
-	@if length($size) == 1
-		height: $size
-		width: $size
-	@else if length($size) == 2
-		height: nth($size, 2)
-		width: nth($size, 1)
+=size($width, $height: $width)
+	width: $width
+	height: $height
