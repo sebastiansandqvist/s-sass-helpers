@@ -1,0 +1,41 @@
+// correct padded sizing
+=bb
+	box-sizing: border-box
+
+// clear floats
+=clearfix
+	&:after
+		clear: both
+		content: ''
+		display: table
+
+// truncate text content
+// (must set width)		
+=ellipsis
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+// margin == padding
+=mp($val)
+	margin: $val
+	padding: $val
+
+
+// ----- size shorthand
+// 		--	+size(10px 20px)
+// ---------------------------------------
+=size($width, $height: $width)
+	height: $height
+	width: $width
+
+// ----- uppercase
+// 		--	+uppercase(2px)
+// ---------------------------------------
+=uppercase($spacing: null)
+	@if $spacing
+		letter-spacing: $spacing
+		text-indent: $spacing
+		text-transform: uppercase
+	@else
+		text-transform: uppercase

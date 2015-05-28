@@ -1,0 +1,421 @@
+/* ------------------------ BORDER ------------------------ */
+@import ../mixins/border
+
+/* EXPECTED OUTPUT
+ *
+ * .border-1 {
+ * 	border-bottom: 1px solid #ccc;
+ * 	border-top: 1px solid #ccc;
+ * } */
+.border-1
+	+border(1px solid #ccc, y n)
+
+
+/* EXPECTED OUTPUT
+ *
+ * .border-2 {
+ * 	border-bottom: 1px dotted #aaa;
+ * 	border-left: 1px dotted #aaa;
+ * 	border-top: 1px dotted #aaa;
+ * } */
+.border-2
+	+border(1px dotted #aaa, y n y y)
+
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-top-default {
+ * 	border-top-left-radius: 5px;
+ * 	border-top-right-radius: 5px;
+ * } */
+.radius-top-default
+	+radius-top
+
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-top {
+ * 	border-top-left-radius: 2px;
+ * 	border-top-right-radius: 2px;
+ * } */
+.radius-top
+	+radius-top(2px)
+
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-bottom-default {
+ * 	border-bottom-left-radius: 5px;
+ * 	border-bottom-right-radius: 5px;
+ * } */
+.radius-bottom-default
+	+radius-bottom
+
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-bottom {
+ * 	border-bottom-left-radius: 2px;
+ * 	border-bottom-right-radius: 2px;
+ * } */
+.radius-bottom
+	+radius-bottom(2px)
+
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-left-default {
+ * 	border-bottom-left-radius: 5px;
+ * 	border-top-left-radius: 5px;
+ * } */
+.radius-left-default
+	+radius-left
+
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-left {
+ * 	border-bottom-left-radius: 2px;
+ * 	border-top-left-radius: 2px;
+ * } */
+.radius-left
+	+radius-left(2px)
+
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-right-default {
+ * 	border-bottom-right-radius: 5px;
+ * 	border-top-right-radius: 5px;
+ * } */
+.radius-right-default
+	+radius-right
+
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-right {
+ * 	border-bottom-right-radius: 2px;
+ * 	border-top-right-radius: 2px;
+ * } */
+.radius-right
+	+radius-right(2px)
+
+
+/* ------------------------ POSITION ------------------------ */
+@import ../mixins/position
+
+/* EXPECTED OUTPUT
+ *
+ * .coords {
+ * 	bottom: 50%;
+ * 	left: 5em;
+ * 	top: 5px;
+ * } */
+.coords
+	+coords(5px n 50% 5em)
+
+
+/* EXPECTED OUTPUT
+ *
+ * .absolute-1 {
+ * 	position: absolute;
+ * } */
+.absolute-1
+	+absolute
+
+
+/* EXPECTED OUTPUT
+ *
+ * .absolute-2 {
+ *	position: absolute;
+ * 	bottom: 50%;
+ * 	left: 5em;
+ * 	top: 5px;
+ * } */
+.absolute-2
+	+absolute(5px n 50% 5em)
+
+
+/* EXPECTED OUTPUT
+ *
+ * .fixed-1 {
+ * 	position: fixed;
+ * } */
+.fixed-1
+	+fixed
+
+/* EXPECTED OUTPUT
+ *
+ * .fixed-2 {
+ *	position: fixed;
+ * 	bottom: 50%;
+ * 	left: 5em;
+ * 	top: 5px;
+ * } */
+.fixed-2
+	+fixed(5px n 50% 5em)
+
+
+/* EXPECTED OUTPUT
+ *
+ * .relative-1 {
+ * 	position: relative;
+ * } */
+.relative-1
+	+relative
+
+
+/* EXPECTED OUTPUT
+ *
+ * .relative-2 {
+ *	position: relative;
+ * 	bottom: 50%;
+ * 	left: 5em;
+ * 	top: 5px;
+ * } */
+.relative-2
+	+relative(5px n 50% 5em)
+
+
+/* ------------------------ RESPONSIVE ------------------------ */
+@import ../mixins/responsive
+
+
+/* EXPECTED OUTPUT
+ *
+ *	@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min--moz-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+ *		.retina {
+ *	    width: 100%;
+ *	  }
+ *	} */
++retina
+	.retina
+		width: 100%
+
+
+/* EXPECTED OUTPUT
+ *
+ *	@media all and (min-width: 100px) and (max-width: 200px) {
+ *		.break {
+ *	    width: 100%;
+ *	  }
+ *	} */
++break(100px, 200px)
+	.break
+		width: 100%
+
+
+/* EXPECTED OUTPUT
+ *
+ *	@media all and (min-width: 100px){
+ *		.min-width {
+ *	    width: 100%;
+ *	  }
+ *	} */
++min-width(100px)
+	.min-width
+		width: 100%
+
+
+/* EXPECTED OUTPUT
+ *
+ *	@media all and (max-width: 1000px){
+ *		.max-width {
+ *	    width: 100%;
+ *	  }
+ *	} */
++max-width(1000px)
+	.max-width
+		width: 100%
+
+
+/* ------------------------ TRANSITIONS ------------------------ */
+@import ../mixins/transitions
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.transition-default {
+ *		transition: all 0.5s ease;
+ *	} */
+.transition-default
+	+transition
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.transition-default-timing {
+ *		transition: all 1s ease;
+ *	} */
+.transition-default-timing
+	+transition(1s)
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.transition {
+ *		transition: all 10s linear;
+ *	} */
+.transition
+	+transition(10s, linear)
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.slow-default {
+ *		transition: all 3s ease;
+ *	} */
+.slow-default
+	+slow
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.slow {
+ *		transition: all 3s linear;
+ *	} */
+.slow
+	+slow(linear)
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.rapid-default {
+ *		transition: all 0.3s ease;
+ *	} */
+.rapid-default
+	+rapid
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.rapid {
+ *		transition: all 0.3s linear;
+ *	} */
+.rapid
+	+rapid(linear)
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.lightning-default {
+ *		transition: all 0.15s ease;
+ *	} */
+.lightning-default
+	+lightning
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.lightning {
+ *		transition: all 0.15s linear;
+ *	} */
+.lightning
+	+lightning(linear)
+
+
+
+/* ------------------------ TRIANGLE ------------------------ */
+@import ../mixins/triangle
+/* TODO: triangle tests */
+
+
+/* ------------------------ UTILITIES ------------------------ */
+@import ../mixins/utilities
+
+/* EXPECTED OUTPUT
+ *
+ *	.bb {
+ *		box-sizing: border-box;
+ *	} */
+.bb
+	+bb
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.clearfix:after {
+ *		clear: both;
+ *		content: "";
+ *		display: table;
+ *	} */
+.clearfix
+	+clearfix
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.ellipsis {
+ *		overflow: hidden;
+ *		text-overflow: ellipsis;
+ *		white-space: nowrap;
+ *		width: 200px;
+ *	} */
+.ellipsis
+	+ellipsis
+	width: 200px
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.mp {
+ *		margin: 10px;
+ *		padding: 10px;
+ *	} */
+.mp
+	+mp(10px)
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.size {
+ *		height: 10px;
+ *		width: 10px;
+ *	} */
+.size
+	+size(10px)
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.sizes {
+ *		height: 20px;
+ *		width: 10px;
+ *	} */
+.sizes
+	+size(10px, 20px)
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.uppercase-1 {
+ *		text-transform: uppercase;
+ *	} */
+.uppercase-1
+	+uppercase
+
+
+/* EXPECTED OUTPUT
+ *
+ *	.uppercase-2 {
+ *		letter-spacing: 2px;
+ *		text-indent: 2px;
+ *		text-transform: uppercase;
+ *	} */
+.uppercase-2
+	+uppercase(2px)
+
+
+
+/* ------------------------ WHEN-INSIDE ------------------------ */
+@import ../mixins/when-inside
+
+/* EXPECTED OUTPUT
+ *
+ *	.container .child {
+ *		width: 100%;
+ *	} */
+.child
+	+when-inside('.container')
+		width: 100%

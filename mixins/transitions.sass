@@ -1,0 +1,13 @@
+@import _defaults
+
+=transition($speed: $default-transition-speed, $timing: $default-transition-timing)
+	transition: all $speed $timing
+
+=slow($timing: $default-transition-timing)
+	+transition($default-transition-slow, $timing)
+
+=rapid($timing: $default-transition-timing)
+	+transition($default-transition-rapid, $timing)
+
+=lightning($timing: $default-transition-timing)
+	+transition($default-transition-lightning, $timing)

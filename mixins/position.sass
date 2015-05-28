@@ -12,26 +12,26 @@
 	$right: nth($coordinates, 2)
 	$bottom: nth($coordinates, 3)
 	$left: nth($coordinates, 4)
-	@if $top != n
-		top: autoOrValue($top)
-	@if $right != n
-		right: autoOrValue($right)
 	@if $bottom != n
 		bottom: autoOrValue($bottom)
 	@if $left != n
 		left: autoOrValue($left)
+	@if $right != n
+		right: autoOrValue($right)
+	@if $top != n
+		top: autoOrValue($top)
 
 // Absolute
-=absolute($coordinates: 0 n n 0)
+=absolute($coordinates: n n n n)
 	position: absolute
 	+coords($coordinates)
 
 // Fixed
-=fixed($coordinates: 0 n n 0)
+=fixed($coordinates: n n n n)
 	position: fixed
 	+coords($coordinates)
 
 // Relative
-=relative($coordinates: 0 n n 0)
+=relative($coordinates: n n n n)
 	position: relative
 	+coords($coordinates)

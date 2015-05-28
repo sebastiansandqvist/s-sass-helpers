@@ -1,0 +1,434 @@
+/* ------------------------ BORDER ------------------------ */
+/* EXPECTED OUTPUT
+ *
+ * .border-1 {
+ * 	border-bottom: 1px solid #ccc;
+ * 	border-top: 1px solid #ccc;
+ * } */
+.border-1 {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .border-2 {
+ * 	border-bottom: 1px dotted #aaa;
+ * 	border-left: 1px dotted #aaa;
+ * 	border-top: 1px dotted #aaa;
+ * } */
+.border-2 {
+  border-bottom: 1px dotted #aaa;
+  border-left: 1px dotted #aaa;
+  border-top: 1px dotted #aaa;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-top-default {
+ * 	border-top-left-radius: 5px;
+ * 	border-top-right-radius: 5px;
+ * } */
+.radius-top-default {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-top {
+ * 	border-top-left-radius: 2px;
+ * 	border-top-right-radius: 2px;
+ * } */
+.radius-top {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-bottom-default {
+ * 	border-bottom-left-radius: 5px;
+ * 	border-bottom-right-radius: 5px;
+ * } */
+.radius-bottom-default {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-bottom {
+ * 	border-bottom-left-radius: 2px;
+ * 	border-bottom-right-radius: 2px;
+ * } */
+.radius-bottom {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-left-default {
+ * 	border-bottom-left-radius: 5px;
+ * 	border-top-left-radius: 5px;
+ * } */
+.radius-left-default {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-left {
+ * 	border-bottom-left-radius: 2px;
+ * 	border-top-left-radius: 2px;
+ * } */
+.radius-left {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-right-default {
+ * 	border-bottom-right-radius: 5px;
+ * 	border-top-right-radius: 5px;
+ * } */
+.radius-right-default {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .radius-right {
+ * 	border-bottom-right-radius: 2px;
+ * 	border-top-right-radius: 2px;
+ * } */
+.radius-right {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+/* ------------------------ POSITION ------------------------ */
+/* EXPECTED OUTPUT
+ *
+ * .coords {
+ * 	bottom: 50%;
+ * 	left: 5em;
+ * 	top: 5px;
+ * } */
+.coords {
+  bottom: 50%;
+  left: 5em;
+  top: 5px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .absolute-1 {
+ * 	position: absolute;
+ * } */
+.absolute-1 {
+  position: absolute;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .absolute-2 {
+ *	position: absolute;
+ * 	bottom: 50%;
+ * 	left: 5em;
+ * 	top: 5px;
+ * } */
+.absolute-2 {
+  position: absolute;
+  bottom: 50%;
+  left: 5em;
+  top: 5px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .fixed-1 {
+ * 	position: fixed;
+ * } */
+.fixed-1 {
+  position: fixed;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .fixed-2 {
+ *	position: fixed;
+ * 	bottom: 50%;
+ * 	left: 5em;
+ * 	top: 5px;
+ * } */
+.fixed-2 {
+  position: fixed;
+  bottom: 50%;
+  left: 5em;
+  top: 5px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .relative-1 {
+ * 	position: relative;
+ * } */
+.relative-1 {
+  position: relative;
+}
+
+/* EXPECTED OUTPUT
+ *
+ * .relative-2 {
+ *	position: relative;
+ * 	bottom: 50%;
+ * 	left: 5em;
+ * 	top: 5px;
+ * } */
+.relative-2 {
+  position: relative;
+  bottom: 50%;
+  left: 5em;
+  top: 5px;
+}
+
+/* ------------------------ RESPONSIVE ------------------------ */
+/* EXPECTED OUTPUT
+ *
+ *	@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min--moz-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+ *		.retina {
+ *	    width: 100%;
+ *	  }
+ *	} */
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min--moz-device-pixel-ratio: 2), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .retina {
+    width: 100%;
+  }
+}
+/* EXPECTED OUTPUT
+ *
+ *	@media all and (min-width: 100px) and (max-width: 200px) {
+ *		.break {
+ *	    width: 100%;
+ *	  }
+ *	} */
+@media all and (min-width: 100px) and (max-width: 200px) {
+  .break {
+    width: 100%;
+  }
+}
+/* EXPECTED OUTPUT
+ *
+ *	@media all and (min-width: 100px){
+ *		.min-width {
+ *	    width: 100%;
+ *	  }
+ *	} */
+@media all and (min-width: 100px) {
+  .min-width {
+    width: 100%;
+  }
+}
+/* EXPECTED OUTPUT
+ *
+ *	@media all and (max-width: 1000px){
+ *		.max-width {
+ *	    width: 100%;
+ *	  }
+ *	} */
+@media all and (max-width: 1000px) {
+  .max-width {
+    width: 100%;
+  }
+}
+/* ------------------------ TRANSITIONS ------------------------ */
+/* EXPECTED OUTPUT
+ *
+ *	.transition-default {
+ *		transition: all 0.5s ease;
+ *	} */
+.transition-default {
+  transition: all 0.5s ease;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.transition-default-timing {
+ *		transition: all 1s ease;
+ *	} */
+.transition-default-timing {
+  transition: all 1s ease;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.transition {
+ *		transition: all 10s linear;
+ *	} */
+.transition {
+  transition: all 10s linear;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.slow-default {
+ *		transition: all 3s ease;
+ *	} */
+.slow-default {
+  transition: all 3s ease;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.slow {
+ *		transition: all 3s linear;
+ *	} */
+.slow {
+  transition: all 3s linear;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.rapid-default {
+ *		transition: all 0.3s ease;
+ *	} */
+.rapid-default {
+  transition: all 0.3s ease;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.rapid {
+ *		transition: all 0.3s linear;
+ *	} */
+.rapid {
+  transition: all 0.3s linear;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.lightning-default {
+ *		transition: all 0.15s ease;
+ *	} */
+.lightning-default {
+  transition: all 0.15s ease;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.lightning {
+ *		transition: all 0.15s linear;
+ *	} */
+.lightning {
+  transition: all 0.15s linear;
+}
+
+/* ------------------------ TRIANGLE ------------------------ */
+/* TODO: triangle tests */
+/* ------------------------ UTILITIES ------------------------ */
+/* EXPECTED OUTPUT
+ *
+ *	.bb {
+ *		box-sizing: border-box;
+ *	} */
+.bb {
+  box-sizing: border-box;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.clearfix:after {
+ *		clear: both;
+ *		content: "";
+ *		display: table;
+ *	} */
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.ellipsis {
+ *		overflow: hidden;
+ *		text-overflow: ellipsis;
+ *		white-space: nowrap;
+ *		width: 200px;
+ *	} */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.mp {
+ *		margin: 10px;
+ *		padding: 10px;
+ *	} */
+.mp {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.size {
+ *		height: 10px;
+ *		width: 10px;
+ *	} */
+.size {
+  height: 10px;
+  width: 10px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.sizes {
+ *		height: 20px;
+ *		width: 10px;
+ *	} */
+.sizes {
+  height: 20px;
+  width: 10px;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.uppercase-1 {
+ *		text-transform: uppercase;
+ *	} */
+.uppercase-1 {
+  text-transform: uppercase;
+}
+
+/* EXPECTED OUTPUT
+ *
+ *	.uppercase-2 {
+ *		letter-spacing: 2px;
+ *		text-indent: 2px;
+ *		text-transform: uppercase;
+ *	} */
+.uppercase-2 {
+  letter-spacing: 2px;
+  text-indent: 2px;
+  text-transform: uppercase;
+}
+
+/* ------------------------ WHEN-INSIDE ------------------------ */
+/* EXPECTED OUTPUT
+ *
+ *	.container .child {
+ *		width: 100%;
+ *	} */
+.container .child {
+  width: 100%;
+}

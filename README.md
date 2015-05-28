@@ -1,6 +1,12 @@
 # s-sass-helpers 
 ## A collection of useful sass mixins
 
+## Tests
+Install the latest version of Sass, then run:
+```bash
+sass --style expanded --no-cache --sourcemap=none test/test.sass test/test.css
+```
+
 ## License
 Copyright (c) 2015, Sebastian Sandqvist <s.github@sparque.me>
 
